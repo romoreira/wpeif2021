@@ -33,10 +33,9 @@ with open('run_'+str(experiment_number)+'.csv', 'w') as f:
         swap_used = psutil.swap_memory().used
         swap_percent = psutil.swap_memory().percent
 
-        cpu_temperature = psutil.sensors_temperatures()
 
         for entry in cpu_temperature['cpu_thermal']:
-            print(entry.current)
+            cpu_temperature = psutil.sensors_temperatures()
 
 
         rows = [[cpu_usage_percent, cpu_freq_current, memory_total, memory_available,
