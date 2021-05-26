@@ -13,7 +13,8 @@ fields = ["cpu_usage_percent",
           "memory_used",
           "memory_free",
           "swap_used",
-          "swap_percent"]
+          "swap_percent",
+          "cpu_temperature"]
 
 with open('run_'+str(experiment_number)+'.csv', 'w') as f:
     write = csv.writer(f)
@@ -32,8 +33,14 @@ with open('run_'+str(experiment_number)+'.csv', 'w') as f:
         swap_used = psutil.swap_memory().used
         swap_percent = psutil.swap_memory().percent
 
+        cpu_temperature = psutil.sensors_temperatures()
+
+        for entry in cpu_temperature['cpu_thermal']:
+            print(entry.current)
+
+
         rows = [[cpu_usage_percent, cpu_freq_current, memory_total, memory_available,
-                 memory_percent, memory_used, memory_free, swap_used, swap_percent ]]
+                 memory_percent, memory_used, memory_free, swap_used, swap_percent, cpu_temperature]]
 
         write.writerows(rows)
         i = i + 1
