@@ -22,8 +22,6 @@ with open('run_'+str(experiment_number)+'.csv', 'w') as f:
     i = 0
     while i < iteration_times:
 
-        print("Loop")
-
         cpu_usage_percent = psutil.cpu_percent(interval=1, percpu=False)
         cpu_freq_current = psutil.cpu_freq().current
         memory_total =  psutil.virtual_memory().total
