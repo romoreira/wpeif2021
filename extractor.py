@@ -35,7 +35,7 @@ with open('run_'+str(experiment_number)+'.csv', 'w') as f:
 
         cpu_temperature = psutil.sensors_temperatures()
         for entry in cpu_temperature['cpu_thermal']:
-            cpu_temperature = psutil.sensors_temperatures()
+            cpu_temperature = entry.current
 
 
         rows = [[cpu_usage_percent, cpu_freq_current, memory_total, memory_available,
