@@ -1,0 +1,100 @@
+======= CLIENT 1 =======
+Ratio:               1.000 (1/1)
+Runtime (s):         0.007
+Msg time min (ms):   1.927
+Msg time max (ms):   1.927
+Msg time mean (ms):  1.927
+Msg time std (ms):   0.000
+Bandwidth (msg/sec): 151.691
+
+======= CLIENT 0 =======
+Ratio:               1.000 (1/1)
+Runtime (s):         0.008
+Msg time min (ms):   1.957
+Msg time max (ms):   1.957
+Msg time mean (ms):  1.957
+Msg time std (ms):   0.000
+Bandwidth (msg/sec): 117.657
+
+======= CLIENT 2 =======
+Ratio:               1.000 (1/1)
+Runtime (s):         0.006
+Msg time min (ms):   1.534
+Msg time max (ms):   1.534
+Msg time mean (ms):  1.534
+Msg time std (ms):   0.000
+Bandwidth (msg/sec): 154.591
+
+======= CLIENT 3 =======
+Ratio:               1.000 (1/1)
+Runtime (s):         0.007
+Msg time min (ms):   1.237
+Msg time max (ms):   1.237
+Msg time mean (ms):  1.237
+Msg time std (ms):   0.000
+Bandwidth (msg/sec): 151.278
+
+======= CLIENT 6 =======
+Ratio:               1.000 (1/1)
+Runtime (s):         0.005
+Msg time min (ms):   0.860
+Msg time max (ms):   0.860
+Msg time mean (ms):  0.860
+Msg time std (ms):   0.000
+Bandwidth (msg/sec): 199.141
+
+======= CLIENT 5 =======
+Ratio:               1.000 (1/1)
+Runtime (s):         0.007
+Msg time min (ms):   0.810
+Msg time max (ms):   0.810
+Msg time mean (ms):  0.810
+Msg time std (ms):   0.000
+Bandwidth (msg/sec): 151.803
+
+======= CLIENT 4 =======
+Ratio:               1.000 (1/1)
+Runtime (s):         0.007
+Msg time min (ms):   0.720
+Msg time max (ms):   0.720
+Msg time mean (ms):  0.720
+Msg time std (ms):   0.000
+Bandwidth (msg/sec): 134.833
+
+======= CLIENT 8 =======
+Ratio:               1.000 (1/1)
+Runtime (s):         0.007
+Msg time min (ms):   0.722
+Msg time max (ms):   0.722
+Msg time mean (ms):  0.722
+Msg time std (ms):   0.000
+Bandwidth (msg/sec): 139.104
+
+======= CLIENT 7 =======
+Ratio:               1.000 (1/1)
+Runtime (s):         0.009
+Msg time min (ms):   1.167
+Msg time max (ms):   1.167
+Msg time mean (ms):  1.167
+Msg time std (ms):   0.000
+Bandwidth (msg/sec): 106.161
+
+======= CLIENT 9 =======
+Ratio:               1.000 (1/1)
+Runtime (s):         0.010
+Msg time min (ms):   1.525
+Msg time max (ms):   1.525
+Msg time mean (ms):  1.525
+Msg time std (ms):   0.000
+Bandwidth (msg/sec): 104.347
+
+========= TOTAL (10) =========
+Total Ratio:                 1.000 (10/10)
+Total Runtime (sec):         0.019
+Average Runtime (sec):       0.007
+Msg time min (ms):           0.720
+Msg time max (ms):           1.957
+Msg time mean mean (ms):     1.246
+Msg time mean std (ms):      0.475
+Average Bandwidth (msg/sec): 141.061
+Total Bandwidth (msg/sec):   1410.606
