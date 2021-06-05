@@ -1,16 +1,11 @@
 import json
+import os
 
 # Opening JSON file
-f = open('string.json',)
 
-# returns JSON object as
-# a dictionary
-data = json.loads(f)
+stream = os.popen('/home/ubuntu/go/bin/mqtt-benchmark --broker tcp://10.0.0.4:1883 --count 100 --size 100 --clients 100 --qos 2 --format json --quiet')
+output = stream.readlines()
 
-# Iterating through the json
-# list
-for each in data['totals']:
-    print(each['msg_time_mean_avg'])
-
-# Closing file
-f.close()
+print(output)
+data = json.load(output)
+print(data['totals']['msg_time_mean_avg']) 
