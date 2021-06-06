@@ -2,18 +2,41 @@ import sys
 import json
 import os
 import subprocess
+import csv
+import datetime as dt
 
 # Opening JSON file
 
+
+fields = ["time",
+          "msg_time_mean_avg"]
 
 messages_amount = sys.argv[1]
 message_size = sys.argv[2]
 client_amount = sys.argv[3]
 qos_spec = sys.argv[4]
+experiment_number = sys.argv[5]
+experiment_times = sys.argv[6]
+experiment_times = int(experiment_times)
 
-json_output = subprocess.check_output("/home/ubuntu/go/bin/mqtt-benchmark --broker tcp://10.0.0.4:1883 --count "+str(messages_amount)+" --size "+str(message_size)+" --clients "+str(client_amount)+" --qos "+str(qos_spec)+" --format json --quiet", shell=True).strip()
+with open('mqtt_latency_'+str(experiment_number)+'.csv', 'w') as f:
 
-json_output = json_output.decode()
-json_output = json.loads(json_output)
+    write = csv.writer(f)
+    write.writerow(fields)
 
-print(json_output['totals']['msg_time_mean_avg']) 
+    while experiment_times > 0:
+
+        json_output = subprocess.check_output("/home/ubuntu/go/bin/mqtt-benchmark --broker tcp://10.0.0.4:1883 --count "+str(messages_amount)+" --size "+str(message_size)+" --clients "+str(client_amount)+" --qos "+str(qos_spec)+" --format json --quiet", shell=True).strip()
+
+        json_output = json_output.decode()
+        json_output = json.loads(json_output)
+
+        #print(json_output['totals']['msg_time_mean_avg']) 
+        msg_time_mean_avg= json_output['totals']['msg_time_mean_avg']
+
+
+        rows = [[dt.datetime.now().time(),msg_time_mean_avg]]
+        write.writerows(rows)
+
+        print(experiment_times)
+        experiment_times = experiment_times - 1
