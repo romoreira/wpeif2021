@@ -1,4 +1,4 @@
-# Simpósio Brasileiro de Automação Inteligente (SBAI2021)
+# XII Workshop de Pesquisa Experimental da Internet do Futuro (WPEIF 2021)
 * Extrator de metricas
 * Experimentos
 
